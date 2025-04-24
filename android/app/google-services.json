@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "390761854844",
+    "project_id": "evenchucoffee",
+    "storage_bucket": "evenchucoffee.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390761854844:android:3512b207003ddc92e096f9",
+        "android_client_info": {
+          "package_name": "com.example.even_chu_coffee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArAFasDYfxgGQ9knn-aszFpaHIq0iB200"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
