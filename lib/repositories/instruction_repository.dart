@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:even_chu_coffee/models/instruction.dart';
+import '../models/instruction.dart';
 
 class InstructionRepository {
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  final _firestore = FirebaseFirestore.instance;
 
   Future<List<Instruction>> fetchInstructions() async {
     final snapshot = await _firestore.collection('Instruction').get();

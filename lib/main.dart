@@ -41,7 +41,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: BlocProvider(
-        create: (_) => InstructionBloc(InstructionRepository()),
+        create: (_) => InstructionBloc(
+          InstructionRepository(),
+        ),
         child: const InstructionScreen(),
       ),
     );

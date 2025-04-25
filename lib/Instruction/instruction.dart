@@ -76,9 +76,7 @@ class _InstructionScreenState extends State<InstructionScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => InstructionDetail(
-          instruction: instruction,
-        ),
+        builder: (context) => InstructionDetail(instruction: instruction),
       ),
     );
   }

@@ -1,34 +1,14 @@
+import 'package:even_chu_coffee/models/instruction_step.dart';
+
 class Instruction {
   final String product;
-  final int step;
-  final String beanTemp;
-  final String fan;
-  final String heat;
-  final String info;
-  final String memo;
-  final String time;
+  final List<InstructionStep> steps;
 
-  Instruction({
-    required this.product,
-    required this.step,
-    required this.beanTemp,
-    required this.fan,
-    required this.heat,
-    required this.info,
-    required this.memo,
-    required this.time,
-  });
+  Instruction({required this.product, required this.steps});
 
-  factory Instruction.fromFirestore(String productId, Map<String, dynamic> data) {
-    return Instruction(
-      product: productId,
-      step: data['Step'] ?? 0,
-      beanTemp: data['BeanTemp'] ?? '',
-      fan: data['Fan'] ?? '',
-      heat: data['Heat'] ?? '',
-      info: data['Info'] ?? '',
-      memo: data['Memo'] ?? '',
-      time: data['Time'] ?? '',
-    );
+  factory Instruction.fromFirestore(String id, Map<String, dynamic> data) {
+    final List<dynamic> stepsData = data['Steps'] ?? [];
+    final steps = stepsData.map((e) => InstructionStep.fromMap(e)).toList();
+    return Instruction(product: id, steps: steps);
   }
 }
