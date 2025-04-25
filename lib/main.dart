@@ -1,6 +1,6 @@
 import 'package:even_chu_coffee/blocs/instruction_bloc.dart';
 import 'package:even_chu_coffee/firebase_options.dart';
-import 'package:even_chu_coffee/instruction.dart';
+import 'package:even_chu_coffee/Instruction/instruction.dart';
 import 'package:even_chu_coffee/repositories/instruction_repository.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
